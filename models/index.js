@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-console.log('MONGO DB=', process.env.MONGODB_URI) || 'mongodb://localhost:27017/question-answer';
+console.log('MONGO DB=', process.env.MONGODB_URI);
 
-const connectionString = process.env.MONGODB_URI;
+const connectionString = process.env.MONGODB_URI || "mongodb://localhost:27017/carTalk";
 const configOptions = {
     useNewUrlParser: true,
     useCreateIndex: true,
-    UseUnifiedTopology: true,
+    useUnifiedTopology: true,
     useFindAndModify: false,
 };
 
@@ -15,6 +15,5 @@ mongoose.connect(connectionString, configOptions)
     .catch((err) => console.log(`MongoDB connection error: ${err}`));
 
 module.exports = {
-    Car: require('./Car'),
-    User: require('./User'),
+    Car: require('./car'),
 };

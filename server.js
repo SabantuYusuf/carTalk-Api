@@ -1,22 +1,31 @@
 // imports
 const express = require('express');
-const cors = require('cors');
-const jwt = require('jsonwebtoken');
+const routes = require('./routes');
+// const cors = require('cors');
+// const jwt = require('jsonwebtoken');
+// require('dotenv').config();
 //doteven
 
-const routes = require('./routes');
-const port = process.env.PORT;
+const router = require('./routes/Cars');
+const PORT = process.env.PORT || 4000;
 const app = express();
 
-// CORS - Cross Origin Resource Sharing:
 
 
 // middleware - JSON parsing
 
+app.use(express.json());
+
+
+// middleware - cors
+app.use(cors())
 
 // middleware - API routes
-// Car Routes
+app.use('/api/v1/carTalk', router.cars);
+
+
+
 
 
 // connection 
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

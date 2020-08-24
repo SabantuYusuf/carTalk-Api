@@ -1,0 +1,38 @@
+{
+    "cars": [
+        {
+            "carPhotoUrl": "https://autowise.com/wp-content/uploads/2017/02/gtx-e1486744302685.jpg",
+            "name": "Buick Riviera GS",
+            "year": "1965",
+            "model": " 1965 year model",
+            "horsepower": "425"
+        },
+        {
+            "carPhotoUrl": "https://autowise.com/wp-content/uploads/2017/02/1965-buick-riviera-gs-3-e1486772700491.jpg",
+            "name": "Mercury Cougar XR-7 GT",
+            "year": "1967",
+            "model": " 1967 year model",
+            "horsepower": "320"
+        },
+        {
+            "carPhotoUrl": "https://autowise.com/wp-content/uploads/2017/02/cougar-e1561052156350.jpg",
+            "name": "Pontiac Grand Prix SJ",
+            "year": "1969",
+            "model": " 1969 year model",
+            "horsepower": "370"
+        },
+        {   "carPhotoUrl": "https://autowise.com/wp-content/uploads/2017/02/gp-sj-e1561052174342.jpg",
+            "name": "Oldsmobile Cutlass Supreme SX",
+            "year": "1970",
+            "model": " 1970 year model",
+            "horsepower": "365"
+        },
+        {
+            "carPhotoUrl": "https://autowise.com/wp-content/uploads/2017/02/continental-e1561052197853.jpg",
+            "name": "Chevrolet Monte Carlo SS",
+            "year": "1970",
+            "model": " 1970 year model",
+            "horsepower": "450"
+        }
+    ]
+}
