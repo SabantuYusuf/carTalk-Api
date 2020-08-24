@@ -1,19 +1,19 @@
 // imports
 const express = require('express');
 const routes = require('./routes');
-// const cors = require('cors');
+const cors = require('cors');
 // const jwt = require('jsonwebtoken');
-// require('dotenv').config();
+require('dotenv').config();
 //doteven
 
-const router = require('./routes/Cars');
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4001;
 const app = express();
 
 
 
 // middleware - JSON parsing
-
+// Parse JSON datta out, turn it back into an object and attach it to request object as body
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cors())
 
 // middleware - API routes
-app.use('/api/v1/carTalk', router.cars);
+app.use('/api/v1/carTalk', routes.cars);
 
 
 

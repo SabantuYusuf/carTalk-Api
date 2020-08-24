@@ -1,6 +1,6 @@
 // imports
 const router = require('express').Router();
-const ctrl = require('../controllers/cars');
+const ctrl = require('../controllers');
 //requre auth here
 
 

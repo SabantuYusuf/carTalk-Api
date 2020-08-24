@@ -8,7 +8,7 @@ const index = (req, res) => {
     db.Car.find({}, (err, foundCars) => {
         if (err) console.log('Error in cars index:', err);
 
-        res.json({cars: foundCars})
+        res.json({cars:foundCars})
         // if(!foundCars) return res.json({
         //     message: 'No Cars found in db'
         // })
