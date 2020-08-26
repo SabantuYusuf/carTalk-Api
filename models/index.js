@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 console.log('MONGO DB=', process.env.MONGODB_URI);
 
-const connectionString = process.env.MONGODB_URI || "mongodb://localhost:27017/cars";
+const connectionString = process.env.MONGODB_URI || "mongodb://localhost:27017/car";
 const configOptions = {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -15,5 +15,5 @@ mongoose.connect(connectionString, configOptions)
     .catch((err) => console.log(`MongoDB connection error: ${err}`));
 
 module.exports = {
-    Car: require('./Car'),
+    Car: require('./car'),
 };

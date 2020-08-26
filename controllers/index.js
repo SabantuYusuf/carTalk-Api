@@ -1,3 +1,4 @@
 module.exports = {
-    cars: require('./cars')
+    cars: require('./cars'),
+    auth: require('./auth')
 };
