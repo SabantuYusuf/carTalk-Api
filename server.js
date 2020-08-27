@@ -14,6 +14,7 @@ const app = express();
 // middleware - cors : cross origin Resourse Sharing
 app.use(cors({
     origin: [`http://localhost:3000`],
+    method: "GET, POST, PUT DELETE",
     // credentials: true, // allows the session cookie to be sent back and forth from server to client
     optionsSuccessStatus: 200 
 }));
@@ -28,7 +29,7 @@ app.use(express.json());
 app.use('/api/v1/carTalk', routes.cars);
 
 // Auth routes
-// app.use('/api/v1/auth', routes.auth);
+app.use('/api/v1/auth', routes.auth);
 
 
 
