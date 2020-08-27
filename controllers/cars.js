@@ -4,6 +4,7 @@ const db = require('../models');
 
 // const router = express.Router();
 
+// All car
 const index = (req, res) => {
     db.Car.find({}, (err, foundCars) => {
         if (err) console.log('Error in cars index:', err);
@@ -16,7 +17,7 @@ const index = (req, res) => {
     });
 };
 
-
+// Car show
 const show = (req, res) => {
     db.Car.findById(req.params.id, (err, foundCar) => {
         if (err) console.log('Error in cars show:', err);
@@ -25,6 +26,7 @@ const show = (req, res) => {
     });
 };
 
+// New Car
 const create = (req, res) => {
     db.Car.create(req.body, (err, savedCar) => {
         if (err) console.log('Error in cars create:', err);
@@ -34,6 +36,7 @@ const create = (req, res) => {
 };
 
 
+// Edit Car
 const update = (req, res) => {
     db.Car.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCar) => {
         if (err) console.log('Error in cars update:', err);
@@ -46,11 +49,13 @@ const update = (req, res) => {
     });
 };
 
+
+// Delete Car
 const destroy = (req, res) => {
-    db.Car.findByIdAndDelete(req.params.id, (err, deletedCar) => {
+    db.Car.findByIdAndDelete(req.params.id, (err, deleteCar) => {
         if (err) console.log('Error in cars destroy:', err);
 
-        res.status(200).json(deletedCar);
+        res.status(200).json(deleteCar);
     });
 };
 

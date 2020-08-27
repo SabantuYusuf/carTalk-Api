@@ -7,7 +7,7 @@ const authRequired = (req, res, next) => {
     console.log('Verify Token --->', token);
 
     // VERIGY TOKEN
-    jwt.verify(token, process.env.JWT.SECRET, (err, decodedUser) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, decodedUser) => {
         if (err || !decodedUser) {
             return res.status(401).json({
                 message: 'You are not authorized. Please login and try again'
