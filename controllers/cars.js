@@ -41,11 +41,14 @@ const update = (req, res) => {
     db.Car.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCar) => {
         if (err) console.log('Error in cars update:', err);
 
-        if (!updatedCar) {
-            res.status(400).json({message: `Could not find car with id ${req.params.id}`});
-        }
+        // if (!updatedCar) {
+        //     res.status(400).json({message: `Could not find car with id ${req.params.id}`});
+        // }
 
-        res.json(updatedCar);
+        res.json({
+            status: 200,
+            data: updatedCar
+        });
     });
 };
 

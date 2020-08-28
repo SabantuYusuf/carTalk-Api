@@ -10,7 +10,7 @@ router.get('/', ctrl.cars.index);
 router.get('/:id', ctrl.cars.show);
 
 router.post('/', authRequired, ctrl.cars.create);
-router.put('/:id', authRequired, ctrl.cars.update);
+router.put('/:id/update', authRequired, ctrl.cars.update);
 router.delete('/:id', authRequired, ctrl.cars.destroy);
 
 
